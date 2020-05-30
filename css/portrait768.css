@@ -83,6 +83,7 @@
   section .descripcion .share-bar .emprendimiento,
   section .descripcion .share-bar .mentalidad,
   section .descripcion .share-bar .trabajo,
+  section .descripcion .share-bar .nada,
   section .suggestions {
     display: none;
   }
