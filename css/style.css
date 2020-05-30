@@ -1,0 +1,452 @@
+/* ------------------------------------------- Start General */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body .body {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "left center";
+  font-size: 16px;
+}
+li {
+  list-style-type: none;
+}
+/* ------------------------------------------- End General */
+
+/* ------------------------------------------- Start Icons */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?11m1t0');
+  src:  url('fonts/icomoon.eot?11m1t0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?11m1t0') format('truetype'),
+    url('fonts/icomoon.woff?11m1t0') format('woff'),
+    url('fonts/icomoon.svg?11m1t0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-video-camera:before {
+  content: "\e914";
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 1.3125rem;
+}
+.icon-bell:before {
+  content: "\e951";
+  text-align: center;
+  align-items: center;
+  color: #3c455d;
+  font-size: 1.3125rem;
+}
+.icon-search:before {
+  content: "\e986";
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 1.3125rem;
+}
+.icon-cloud-download:before {
+  content: "\e9c2";
+  text-align: center;
+  align-items: center;
+  color: #3c455d;
+  font-size: 1.3125rem;
+}
+.icon-share:before {
+  content: "\ea7d";
+  text-align: center;
+  align-items: center;
+  color: #3c455d;
+  font-size: 1.3125rem;
+}
+.icon-facebook:before {
+  content: "\ea90";
+  color: white;
+  font-size: 35px;
+}
+.icon-instagram:before {
+  content: "\ea92";
+  color: white;
+  font-size: 35px;
+}
+.icon-twitter:before {
+  content: "\ea96";
+    color: white;
+  font-size: 35px;
+}
+.icon-github:before {
+  content: "\eab0";
+    color: white;
+  font-size: 35px;
+}
+
+
+/* ------------------------------------------- End Icons */
+
+/* ------------------------------------------- Start Bar left */
+header {
+  display: none;
+}
+.bar-left,
+.footer-bar-left-container {
+  grid-area: left;
+  background: #151b31;
+  color: white;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 151vh;
+}
+header .platzi-video,
+section .my-playlist .platzi-video,
+footer .platzi-video
+ {
+  margin: 1.25rem 0 1.25rem 1.25rem;
+  color: white;
+  font-weight: 700;
+  font-size: 2.188rem;
+}
+header .platzi-video .video,
+section .my-playlist .platzi-video .video,
+footer .video{
+  background: -webkit-linear-gradient(left, rgba(244,34,14,1) 0%, rgba(251,17,8,1) 0%, rgba(253,30,12,1) 0%, rgba(250,58,83,1) 24%, rgba(250,85,118,1) 55%, rgba(250,203,225,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section .my-playlist p,
+section .lista-amigos {
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0.75rem;
+}
+section .my-playlist .Mi-Playlist,
+section .lista-amigos {
+  font-size: 1rem;
+  font-weight: 600;
+}
+section .bar-left .lista-amigos {
+  margin-top: 10%;
+}
+.playlist-friends {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 1.5625rem;
+  padding-left: 1.5625rem;
+  margin-bottom: 15%;
+}
+section .bar-left .playlist-friends p  {
+  font-size: 0.875rem;
+  margin: 0;
+}
+.playlist-friends .friend1,
+.playlist-friends .friend2,
+.playlist-friends .friend3,
+.playlist-friends .friend4 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 100%;
+  align-items: center;
+} 
+
+.playlist-friends .friend1 img,
+.playlist-friends .friend2 img,
+.playlist-friends .friend3 img,
+.playlist-friends .friend4 img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* ------------------------------------------- End Bar Left */
+
+/* ---------------------------------------------------------------- Start main */
+main {
+  grid-area: center;
+}
+/* -------------------------------------------Start video */
+main .video {
+  /* height: 45%; */
+  width: 100%;
+  min-height: 480px;
+  height: 56.25vh;
+  /* max-height: calc(100vh - 169px); */
+  position: relative;
+  margin: 0;
+}
+main .video .carlos {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* -------------------------------------------End video */
+section .descripcion .descripcion-text p {
+  margin: 0;
+  padding: 0.156rem 0 0.156rem 0.625rem;
+  color: #989898;
+}
+section .descripcion .descripcion-text-title p{
+  margin-top: 0.625rem;
+  color: black;
+  font-size: 1.25rem;
+}
+/* -------------------------------------------Start share */
+section .descripcion .share-bar {
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  gap: 1.563rem;
+  padding-top: 0.625rem;
+  padding-bottom: 1.563rem;
+  padding-right: 1.125rem;
+  border-bottom: 1px solid #bdbdbd;
+  align-items: center;
+  justify-items: center;
+}
+section .descripcion .share-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .descripcion .chanel-carlos,
+section .descripcion .share-bar .chanel-carlos-responsive {
+  display: grid;
+  grid-template-columns: 2.813rem 1fr;
+  grid-auto-flow: column;
+  gap: 1.25rem;
+  padding-left: 1.25rem;
+  align-items: center;
+  margin-top: 0.625rem;
+}
+section .descripcion .chanel-carlos figure,
+section .descripcion .share-bar .chanel-carlos-responsive figure {
+  margin: 0;
+}
+section .descripcion .chanel-carlos figure img,
+section .descripcion .share-bar .chanel-carlos-responsive figure img {
+  border-radius: 50%;
+  width: 2.813rem;
+  height: 2.813rem;
+  object-fit: cover;
+}
+.chanel-carlos .chanel-carlos-text a,
+.chanel-carlos-responsive .chanel-carlos-responsive-text a {
+  margin: 0;
+  font-size: 12px;
+}
+section .chanel-carlos-responsive .chanel-carlos-responsive-text a {
+  justify-content: initial;
+}
+.chanel-carlos-text-bell,
+.chanel-carlos-responsive-text-bell {
+  display: flex;
+  align-items: center;
+}
+.chanel-carlos .chanel-carlos-text-bell a,
+.chanel-carlos-responsive .chanel-carlos-responsive-text-bell a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.icon-bell {
+  padding-left: 1.25rem;
+}
+section .descripcion .share-bar .agregar-a-mi-lista,
+section .descripcion .share-bar .compartir-container,
+section .descripcion .share-bar .guardar-container,
+section .descripcion .share-bar .nada,
+section .descripcion .share-bar .educacion,
+section .descripcion .share-bar .emprendimiento,
+section .descripcion .share-bar .mentalidad,
+section .descripcion .share-bar .trabajo,
+section .descripcion .share-bar .category-educacion,
+section .descripcion .share-bar .category-emprendimiento,
+section .descripcion .share-bar .category-mentalidad,
+section .descripcion .share-bar .category-trabajo,
+section .descripcion .share-bar .chanel-carlos-agregar-a-mi-lista {
+  border-radius: 1rem;
+  height: 1.875rem;
+  color: white;
+}
+section .descripcion .share-bar .chanel-carlos-responsive,
+section .descripcion .share-bar .category-container,
+section .descripcion .share-bar .icon-container {
+  display: none;
+}
+section .descripcion .share-bar .agregar-a-mi-lista,
+section .descripcion .share-bar .chanel-carlos-agregar-a-mi-lista {
+  grid-column: 1 / span 2;
+  background: -webkit-linear-gradient(left, rgba(244,34,14,1) 0%, rgba(251,17,8,1) 0%, rgba(253,30,12,1) 0%, rgba(250,58,83,1) 24%, rgba(250,85,118,1) 55%, rgb(250, 160, 187) 100%);
+  width: 80%;
+}
+section .descripcion .share-bar .compartir-container a,
+section .descripcion .share-bar .guardar-container a {
+  color: #3c455d;
+}
+section .descripcion .share-bar .compartir-container,
+section .descripcion .share-bar .guardar-container {
+  width: 100%;
+  height: 100%;
+}
+section .descripcion .share-bar .educacion,
+section .descripcion .share-bar .category-container .category-educacion,
+section .descripcion .share-bar .emprendimiento,
+section .descripcion .share-bar .category-container .category-emprendimiento,
+section .descripcion .share-bar .mentalidad,
+section .descripcion .share-bar .category-container .category-mentalidad,
+section .descripcion .share-bar .trabajo,
+section .descripcion .share-bar .category-container .category-trabajo
+{
+  width: 100%;
+  box-sizing: border-box;
+}
+section .descripcion .share-bar .educacion,
+section .descripcion .share-bar .category-container .category-educacion {
+  background: -webkit-linear-gradient(left, rgba(118,36,242,1) 0%, rgba(152,83,249,1) 68%, rgba(183,135,255,1) 100%);
+  padding: 0 0.625rem 0 0.625rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+section .descripcion .share-bar .emprendimiento,
+section .descripcion .share-bar .category-container .category-emprendimiento {
+  background: -webkit-linear-gradient(left, rgba(23,233,194,1) 0%, rgba(126,230,209,1) 59%, rgba(144,245,223,1) 100%);
+  padding: 0 0.625rem 0 0.625rem;
+}
+section .descripcion .share-bar .mentalidad,
+section .descripcion .share-bar .category-container .category-mentalidad {
+  background: -webkit-linear-gradient(left, rgba(224,22,34,1) 0%, rgba(212,78,87,1) 74%, rgba(219,85,94,1) 100%);
+  padding: 0 0.625rem 0 0.625rem;
+}
+section .descripcion .share-bar .trabajo,
+section .descripcion .share-bar .category-container .category-trabajo {
+  background: -webkit-linear-gradient(left, rgba(237,48,132,1) 0%, rgba(222,118,165,1) 74%, rgba(235,123,173,1) 100%);
+  padding: 0 0.625rem 0 0.625rem;
+}
+/* ------------------------------------------- End share */
+/* ------------------------------------------- Start comment and suggestions */
+/* ------------------------------------------- Start comments */
+.suggestions-responsive {
+  display: none;
+}
+section .comment-suggestions-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "comments suggestions";
+  gap: 2.5rem;
+}
+section .comment-suggestions-container .comments{
+  grid-area: comments;
+  padding-left: 1.5625rem;
+}
+#end-comment {
+  margin-bottom: 1.5rem;
+}
+section .comment-suggestions-container .comments p,
+section .comment-suggestions-container .suggestions .suggestions-p{
+  margin-top: 1.5rem;
+}
+section .comment-suggestions-container .comments .input-container{
+  position: relative;
+  align-self: center;
+}
+section .comment-suggestions-container .comments .input-container input {
+  width: 90%;
+  height: 2.5rem;
+  text-indent: 3.44rem;
+  font-size: 1rem;
+  background: #f2f2f2;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.438rem;
+  width: 100%;
+}
+section .comment-suggestions-container .comments .input-container input:hover {
+  box-shadow: 0 1px 4px 0px #000000;
+}
+section .comment-suggestions-container .comments .input-container input:focus {
+  outline: none;
+}
+section .comment-suggestions-container .comments .input-container img,
+section .comment-suggestions-container .comments .gordon-carol img {
+  border-radius: 50%;
+  width: 2.375rem;
+  height: 2.375rem;
+  object-fit: cover;
+}
+section .comment-suggestions-container .comments .input-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto auto .5rem;
+}
+section .comment-suggestions-container .comments .comments-container{
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  align-items: center;
+  gap: 1.25rem;
+}
+section .comment-suggestions-container .comments .gordon-carol {
+  display: flex;
+  
+}
+section .comment-suggestions-container .comments .gordon-carol-p-container {
+  padding-left: 1.5625rem;
+}
+section .comment-suggestions-container .comments .gordon-carol-p-container p {
+  margin:0;
+}
+section .comment-suggestions-container .comments .gordon-carol-p-container .gordon-carol-p-name {
+  font-weight: 500;
+}
+/* ------------------------------------------- End comments */
+
+/* ------------------------------------------- Start suggestions */
+section .comment-suggestions-container .suggestions{
+  grid-area: suggestions;
+  width: 66%;
+  justify-self: center;
+}
+section .comment-suggestions-container .suggestions .cybertrunk img,
+section .comment-suggestions-container .suggestions .door img {
+  object-fit: cover;
+  width: 100%;
+  cursor: pointer;
+}
+section .comment-suggestions-container .suggestions .cybertrunk img:hover,
+section .comment-suggestions-container .suggestions .door img:hover {
+  box-shadow: 0 0 6px 1px #000000;
+}
+/* ------------------------------------------- End suggestions */
+/* ------------------------------------------- End comment and suggestions */
+/* ---------------------------------------------------------------- End main */
+/* ---------------------------------------------------------------- Start footer */
+footer {
+  display: none;
+}
+/* ---------------------------------------------------------------- End footer */
